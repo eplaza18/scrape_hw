@@ -14,10 +14,13 @@ $.getJSON("/articles", function(data) {
         "'></br>" +
         data[i].summary +
         "<br /><em>" +
+        '<a href="' +
         data[i].link +
-        "</em></p>" +
+        '" target="_blank">' +
+        data[i].link +
+        "</em></a></p>" +
         "<h2>" +
-        data.title +
+        data[i].title +
         "</h2>" +
         "<input id='titleinput' name='title' >" +
         "<textarea id='bodyinput' name='body'></textarea>" +
